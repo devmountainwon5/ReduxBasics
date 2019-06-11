@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux';
 
-const myFirstProperty = (state=`Josh`, action) => {
+// Set up properties in our big object in the sky with function. 
+const name = (state=`Josh`, action) => {
     switch(action.type){
         case 'update_firstProp':
             return action.payload.name;
@@ -10,6 +11,7 @@ const myFirstProperty = (state=`Josh`, action) => {
 }
 
 const count = (state=0, action) => {
+    debugger
     switch(action.type){
         case 'add_number' :
             state++;
@@ -26,4 +28,5 @@ const myOtherProperty = (state=`Other`, action) => {
     return state;
 }
 
-export default combineReducers({myFirstProperty, count, myOtherProperty})
+//Combined them together see line 1 for imports. 
+export default combineReducers({name, count, myOtherProperty})

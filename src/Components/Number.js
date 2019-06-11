@@ -19,7 +19,7 @@ class Number extends Component {
   render() {
     return (
       <div>
-            {this.props.myFirstProperty}
+            {this.props.name}
             <br/>
             <input type="text" onChange={this.handleChange}/>
             <br/>
